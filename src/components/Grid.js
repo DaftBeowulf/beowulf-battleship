@@ -7,7 +7,7 @@ const Grid = props => {
   return (
     <div className="grid-container">
       {tiles.map(tile => (
-        <Tile tileData={tile} />
+        <Tile tileData={tile} key={`${tile.x}${tile.y}`} />
       ))}
     </div>
   );
