@@ -1,0 +1,27 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+/* Needs to handle directions - styled components? */
+
+.grid-carrier {
+  grid-column: span 5;
+}
+
+.grid-battleship {
+  grid-column: span 4;
+}
+
+.grid-cruiser {
+  grid-column: span 3;
+}
+
+.grid-submarine {
+  grid-column: span 3;
+}
+
+.grid-destroyer {
+  grid-column: span 2;
+}
