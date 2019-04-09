@@ -6,10 +6,9 @@ export const enemyBoard = typesArray => {
 
   const collisionCheck = newCoord => {
     if (
+      // eslint-disable-next-line
       ships.filter(coord => {
-        if (newCoord.substring(3) === coord.substring(3)) {
-          return coord;
-        }
+        return newCoord.substring(3) === coord.substring(3);
       }).length > 0
     ) {
       return true;
@@ -58,22 +57,19 @@ export const enemyBoard = typesArray => {
     switch (currentDir) {
       case 0:
         return (parseInt(prevCoord, 10) + 10).toString();
-        break;
       case 1:
         return (parseInt(prevCoord, 10) + 1).toString();
-        break;
       case 2:
         return (parseInt(prevCoord, 10) - 10).toString();
-        break;
       case 3:
         return (parseInt(prevCoord, 10) - 1).toString();
-        break;
       default:
         console.log("addCoord switch error");
     }
   };
 
   const placeShip = type => {
+    // Ship type Cruiser is type 6, but length 3 (type 3 is taken by Submarine):
     const shipLength = type === 6 ? 3 : type;
     let tempPlace = [];
     let checkedDir = [];

@@ -10,11 +10,23 @@ import { enemyBoard } from "./logic/enemyBoard";
 import "./styles.css";
 
 class App extends React.Component {
-  state = { eBoard: [] };
+  state = { eBoard: [], eAttacks: [] };
 
   componentDidMount() {
     this.setEnemyBoard();
   }
+
+  eAttack = e => {
+    e.preventDefault();
+    const tileCoord = e.target.id;
+    this.state.eBoard.forEach(coord => {
+      if (coord.substring(3) === tileCoord) {
+        console.log("HIT");
+      } else {
+        console.log("MISS");
+      }
+    });
+  };
 
   setEnemyBoard = () => this.setState({ eBoard: enemyBoard() });
 
@@ -25,7 +37,7 @@ class App extends React.Component {
         <h1>Battleship!</h1>
         <Grid />
         {/* <PlayerBoard /> */}
-        <EnemyBoard />
+        <EnemyBoard attack={this.eAttack} />
         {/* <Controls/> */}
       </div>
     );

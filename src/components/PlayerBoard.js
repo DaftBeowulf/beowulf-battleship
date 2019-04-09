@@ -2,6 +2,8 @@ import React, { Component, Fragment } from "react";
 import Ship from "./Ship";
 import "./PlayerBoard.css";
 
+// Describe this component
+
 class PlayerBoard extends Component {
   constructor(props) {
     super(props);

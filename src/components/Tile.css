@@ -2,4 +2,13 @@
   width: 20px;
   height: 20px;
   border: 1px solid black;
+  color: white;
+}
+/* This is for if you hit a tile with no ship present*/
+.tile.hit {
+  color: red;
+}
+/* This is for if you hit a tile WITH a ship present*/
+.tile.hit.ship {
+  color: blue;
 }
