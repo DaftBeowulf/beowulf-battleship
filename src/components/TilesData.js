@@ -1,112 +1,110 @@
-const tiles = [
-  { id: "11", ship: false, hit: false },
-  { id: "12", ship: false, hit: false },
-  { id: "13", ship: false, hit: false },
-  { id: "14", ship: false, hit: false },
-  { id: "15", ship: false, hit: false },
-  { id: "16", ship: false, hit: false },
-  { id: "17", ship: false, hit: false },
-  { id: "18", ship: false, hit: false },
-  { id: "19", ship: false, hit: false },
-  { id: "10", ship: false, hit: false },
-  { id: "21", ship: false, hit: false },
-  { id: "22", ship: false, hit: false },
-  { id: "23", ship: false, hit: false },
-  { id: "24", ship: false, hit: false },
-  { id: "25", ship: false, hit: false },
-  { id: "26", ship: false, hit: false },
-  { id: "27", ship: false, hit: false },
-  { id: "28", ship: false, hit: false },
-  { id: "29", ship: false, hit: false },
-  { id: "20", ship: false, hit: false },
-  { id: "31", ship: false, hit: false },
-  { id: "32", ship: false, hit: false },
-  { id: "33", ship: false, hit: false },
-  { id: "34", ship: false, hit: false },
-  { id: "35", ship: false, hit: false },
-  { id: "36", ship: false, hit: false },
-  { id: "37", ship: false, hit: false },
-  { id: "38", ship: false, hit: false },
-  { id: "39", ship: false, hit: false },
-  { id: "30", ship: false, hit: false },
-  { id: "41", ship: false, hit: false },
-  { id: "42", ship: false, hit: false },
-  { id: "43", ship: false, hit: false },
-  { id: "44", ship: false, hit: false },
-  { id: "45", ship: false, hit: false },
-  { id: "46", ship: false, hit: false },
-  { id: "47", ship: false, hit: false },
-  { id: "48", ship: false, hit: false },
-  { id: "49", ship: false, hit: false },
-  { id: "40", ship: false, hit: false },
-  { id: "51", ship: false, hit: false },
-  { id: "52", ship: false, hit: false },
-  { id: "53", ship: false, hit: false },
-  { id: "54", ship: false, hit: false },
-  { id: "55", ship: false, hit: false },
-  { id: "56", ship: false, hit: false },
-  { id: "57", ship: false, hit: false },
-  { id: "58", ship: false, hit: false },
-  { id: "59", ship: false, hit: false },
-  { id: "50", ship: false, hit: false },
-  { id: "61", ship: false, hit: false },
-  { id: "62", ship: false, hit: false },
-  { id: "63", ship: false, hit: false },
-  { id: "64", ship: false, hit: false },
-  { id: "65", ship: false, hit: false },
-  { id: "66", ship: false, hit: false },
-  { id: "67", ship: false, hit: false },
-  { id: "68", ship: false, hit: false },
-  { id: "69", ship: false, hit: false },
-  { id: "60", ship: false, hit: false },
-  { id: "71", ship: false, hit: false },
-  { id: "72", ship: false, hit: false },
-  { id: "73", ship: false, hit: false },
-  { id: "74", ship: false, hit: false },
-  { id: "75", ship: false, hit: false },
-  { id: "76", ship: false, hit: false },
-  { id: "77", ship: false, hit: false },
-  { id: "78", ship: false, hit: false },
-  { id: "79", ship: false, hit: false },
-  { id: "70", ship: false, hit: false },
-  { id: "81", ship: false, hit: false },
-  { id: "82", ship: false, hit: false },
-  { id: "83", ship: false, hit: false },
-  { id: "84", ship: false, hit: false },
-  { id: "85", ship: false, hit: false },
-  { id: "86", ship: false, hit: false },
-  { id: "87", ship: false, hit: false },
-  { id: "88", ship: false, hit: false },
-  { id: "89", ship: false, hit: false },
-  { id: "80", ship: false, hit: false },
-  { id: "91", ship: false, hit: false },
-  { id: "92", ship: false, hit: false },
-  { id: "93", ship: false, hit: false },
-  { id: "94", ship: false, hit: false },
-  { id: "95", ship: false, hit: false },
-  { id: "96", ship: false, hit: false },
-  { id: "97", ship: false, hit: false },
-  { id: "98", ship: false, hit: false },
-  { id: "99", ship: false, hit: false },
-  { id: "90", ship: false, hit: false },
-  { id: "01", ship: false, hit: false },
-  { id: "02", ship: false, hit: false },
-  { id: "03", ship: false, hit: false },
-  { id: "04", ship: false, hit: false },
-  { id: "05", ship: false, hit: false },
-  { id: "06", ship: false, hit: false },
-  { id: "07", ship: false, hit: false },
-  { id: "08", ship: false, hit: false },
-  { id: "09", ship: false, hit: false },
-  { id: "00", ship: false, hit: false }
-];
+const tiles = [ { id: '11', miss: false, hit: false },
+{ id: '12', miss: false, hit: false },
+{ id: '13', miss: false, hit: false },
+{ id: '14', miss: false, hit: false },
+{ id: '15', miss: false, hit: false },
+{ id: '16', miss: false, hit: false },
+{ id: '17', miss: false, hit: false },
+{ id: '18', miss: false, hit: false },
+{ id: '19', miss: false, hit: false },
+{ id: '10', miss: false, hit: false },
+{ id: '21', miss: false, hit: false },
+{ id: '22', miss: false, hit: false },
+{ id: '23', miss: false, hit: false },
+{ id: '24', miss: false, hit: false },
+{ id: '25', miss: false, hit: false },
+{ id: '26', miss: false, hit: false },
+{ id: '27', miss: false, hit: false },
+{ id: '28', miss: false, hit: false },
+{ id: '29', miss: false, hit: false },
+{ id: '20', miss: false, hit: false },
+{ id: '31', miss: false, hit: false },
+{ id: '32', miss: false, hit: false },
+{ id: '33', miss: false, hit: false },
+{ id: '34', miss: false, hit: false },
+{ id: '35', miss: false, hit: false },
+{ id: '36', miss: false, hit: false },
+{ id: '37', miss: false, hit: false },
+{ id: '38', miss: false, hit: false },
+{ id: '39', miss: false, hit: false },
+{ id: '30', miss: false, hit: false },
+{ id: '41', miss: false, hit: false },
+{ id: '42', miss: false, hit: false },
+{ id: '43', miss: false, hit: false },
+{ id: '44', miss: false, hit: false },
+{ id: '45', miss: false, hit: false },
+{ id: '46', miss: false, hit: false },
+{ id: '47', miss: false, hit: false },
+{ id: '48', miss: false, hit: false },
+{ id: '49', miss: false, hit: false },
+{ id: '40', miss: false, hit: false },
+{ id: '51', miss: false, hit: false },
+{ id: '52', miss: false, hit: false },
+{ id: '53', miss: false, hit: false },
+{ id: '54', miss: false, hit: false },
+{ id: '55', miss: false, hit: false },
+{ id: '56', miss: false, hit: false },
+{ id: '57', miss: false, hit: false },
+{ id: '58', miss: false, hit: false },
+{ id: '59', miss: false, hit: false },
+{ id: '50', miss: false, hit: false },
+{ id: '61', miss: false, hit: false },
+{ id: '62', miss: false, hit: false },
+{ id: '63', miss: false, hit: false },
+{ id: '64', miss: false, hit: false },
+{ id: '65', miss: false, hit: false },
+{ id: '66', miss: false, hit: false },
+{ id: '67', miss: false, hit: false },
+{ id: '68', miss: false, hit: false },
+{ id: '69', miss: false, hit: false },
+{ id: '60', miss: false, hit: false },
+{ id: '71', miss: false, hit: false },
+{ id: '72', miss: false, hit: false },
+{ id: '73', miss: false, hit: false },
+{ id: '74', miss: false, hit: false },
+{ id: '75', miss: false, hit: false },
+{ id: '76', miss: false, hit: false },
+{ id: '77', miss: false, hit: false },
+{ id: '78', miss: false, hit: false },
+{ id: '79', miss: false, hit: false },
+{ id: '70', miss: false, hit: false },
+{ id: '81', miss: false, hit: false },
+{ id: '82', miss: false, hit: false },
+{ id: '83', miss: false, hit: false },
+{ id: '84', miss: false, hit: false },
+{ id: '85', miss: false, hit: false },
+{ id: '86', miss: false, hit: false },
+{ id: '87', miss: false, hit: false },
+{ id: '88', miss: false, hit: false },
+{ id: '89', miss: false, hit: false },
+{ id: '80', miss: false, hit: false },
+{ id: '91', miss: false, hit: false },
+{ id: '92', miss: false, hit: false },
+{ id: '93', miss: false, hit: false },
+{ id: '94', miss: false, hit: false },
+{ id: '95', miss: false, hit: false },
+{ id: '96', miss: false, hit: false },
+{ id: '97', miss: false, hit: false },
+{ id: '98', miss: false, hit: false },
+{ id: '99', miss: false, hit: false },
+{ id: '90', miss: false, hit: false },
+{ id: '01', miss: false, hit: false },
+{ id: '02', miss: false, hit: false },
+{ id: '03', miss: false, hit: false },
+{ id: '04', miss: false, hit: false },
+{ id: '05', miss: false, hit: false },
+{ id: '06', miss: false, hit: false },
+{ id: '07', miss: false, hit: false },
+{ id: '08', miss: false, hit: false },
+{ id: '09', miss: false, hit: false },
+{ id: '00', miss: false, hit: false } ]
 {
   /*const genTiles = tileCount => {
   for (i = 0; i < tileCount; i++) {
     tiles.push({ id: i, ship: false, hit: false });
   }
   return tiles;
-}; */
+}; *
 }
 export default tiles;
 
@@ -118,6 +116,45 @@ export default tiles;
 // miss = white with black X
 // hit = white with red circle
 // or whatever - that's just the idea
+
+function generateTiles() {
+  const array = [];
+  for (let i = 1; i < 10; i++) {
+    for (let j = 1; j < 10; j++) {
+      let object = {
+        id: `${i}${j}`,
+        miss: false,
+        hit: false
+      };
+      array.push(object);
+      if (j === 9) {
+        let object2 = {
+          id: `${i}0`,
+          miss: false,
+          hit: false
+        };
+        array.push(object2);
+      }
+    }
+  }
+  for (let i = 1; i < 10; i++) {
+    let object = {
+      id: `0${i}`,
+      miss: false,
+      hit: false
+    };
+    array.push(object);
+    if (i === 9) {
+      let object2 = {
+        id: `00`,
+        miss: false,
+        hit: false
+      };
+      array.push(object2);
+    }
+  }
+  return array;
+}
 
 const checkHit = id => {
   this.state.enemyBoard.forEach(coord => {

@@ -10,7 +10,7 @@ const shipTypes = {
   destroyer: 2
 };
 
-class Ship extends Component {
+class Ship extends PureComponent {
   constructor(props) {
     super(props);
     this.state = { length: shipTypes[this.props.type], sunk: false };

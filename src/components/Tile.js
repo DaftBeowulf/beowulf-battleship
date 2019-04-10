@@ -7,7 +7,7 @@ const Tile = props => {
   return (
     <div
       className={`tile${
-        props.tile.ship ? ` ship` : props.tile.hit ? ` hit` : ``
+        props.tile.miss ? ` miss` : props.tile.hit ? ` hit` : ``
       }`}
     />
   );
